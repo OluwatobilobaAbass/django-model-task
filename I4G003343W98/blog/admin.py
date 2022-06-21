@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .blog import Article
 
-# Register your models here.
+class ArticleDB(admin.ModelAdmin):
+    list_display = [
+    'title', 'body', 'author', 'created_date', 'published_date'
+    ]
